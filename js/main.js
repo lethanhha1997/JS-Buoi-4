@@ -1,4 +1,18 @@
 //Bài 1
+/**
+ * B1: input a,b,c
+ * 
+ * B2
+ * nếu a>b>c
+ * nếu a>c>b
+ * nếu b>c>a
+ * nếu b>a>c
+ * nếu c>a>b
+ * nếu c>b>a
+ * 
+ * B3 log ra thứ thự lớn đến nhỏ
+ * 
+ */
 
 function short(){
     var  a = Number(document.getElementById("number1").value) ;
@@ -28,7 +42,15 @@ document.getElementById("shortNumber").onclick = short;
 
 
 //B2
-
+/**
+ * 
+ * B1:iput dad, mom, brother, sister
+ * 
+ * B2: nếu chọn value nào thì show ra "XIn chào + value iput"
+ * 
+ * b3: in kq ra màng hình
+ * 
+ */
 
 function sendMessage() {
   var member =  document.getElementById("selectMember").value;
@@ -49,6 +71,17 @@ function sendMessage() {
 document.getElementById("sendTitle").onclick = sendMessage;
 
 //B3
+
+/**
+ * b1: input : n1, n2, n3
+ * 
+ * b2:
+ * tạo biến count để đếm số chẵn
+ * lấy giá trị chia cho 2 nếu bằng 0 thì gắn cho count
+ * đếm các số chẵn  rồi hiển thị kq
+ * 
+ * B3: in kq ra màng hình
+ */
 
 
 function countNumber(){
@@ -90,15 +123,27 @@ document.getElementById("logB3").onclick = countNumber;
 
 // B4
 
+/**
+ * B1 input c1, c2, c3
+ * 
+ * B2 nếu có 2 cạnh bằng nhau thì là tam giác đều
+ * nếu có 3 cạnh bằng nhau thì là tam giác cân
+ * nếu c3*c3 = (c1*c1)+ (c2*c2) tam giác vuông
+ * tam giác thường
+ * 
+ * B3 in kq ra màng hình
+ */
+
 function triangle(){
     var c1 = document.getElementById("edge1").value;
     var c2 = document.getElementById("edge2").value;
     var c3 = document.getElementById("edge3").value;
     var nameTriangle;
 
-    if( c1 == c2 && c2 == c3){
+     if( c1 == c2 && c2 == c3 && c3 == c1){
         nameTriangle = " Tam Giác Đều";
-    }else if( c1 == c2 || c2 == c3 || c3 == c1){
+    }
+    else if( c1 == c2 || c2 == c3 || c1 == c3){
         nameTriangle = " Tam Giác Cân";
     }else if (c3*c3 == ( c1* c1) + (c2 *c2) ||c1*c1 == ( c2* c2) + (c3 *c3) || c2*c2 == ( c1* c1) + (c3 *c3)  ){
         nameTriangle = " Tam Giác Vuông";
