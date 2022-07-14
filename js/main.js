@@ -1,3 +1,5 @@
+// ! Mô hình 3 khối ở file txt
+
 //Bài 1
 /**
  * B1: input a,b,c
